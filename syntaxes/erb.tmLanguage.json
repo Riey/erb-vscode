@@ -1,0 +1,111 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ERB",
+	"patterns": [
+		{
+			"name": "comment.line.erb",
+			"match": "^;.*"
+		},
+		{
+			"name": "constant.numeric",
+			"match": "\\b[0-9]+\\b"
+		},
+		{
+			"name": "meta.preprocessor.numeric",
+			"match": "^#DIM .+$"
+		},
+		{
+			"name": "meta.preprocessor.string",
+			"match": "^#DIMS .+$"
+		},
+		{
+			"name": "meta.preprocessor",
+			"match": "^#.*$"
+		},
+		{
+			"name": "support.function",
+			"match": "^@[^\\s\\(]+"
+		},
+		{
+			"name": "variable.parameter.brace",
+			"begin": "\\(", "end": "\\)"
+		},
+		{
+			"name": "support.other",
+			"match": "^$.+"
+		},
+		{
+			"name": "keyword.erb.print",
+			"match": "\\bPRINT(V|S|FORM|FORMS)?(K|D)?(L|W)?\\b"
+		},
+		{
+			"name": "keyword.erb.printsingle",
+			"match": "\\bPRINTSINGLE(V|S|FORM|FORMS)?(K|D)?\\b"
+		},
+		{
+			"name": "keyword.erb.printc",
+			"match": "\\bPRINT(FORM)?(C|LC)\\b"
+		},
+		{
+			"name": "keyword.erb.loop",
+			"match": "\\b(FOR|NEXT|REPEAT|REND|WHILE|WEND|DO|LOOP)\\b"
+		},
+		{
+			"name": "keyword.erb.branch",
+			"match": "\\b(IF|ELSEIF|ELSE|ENDIF|SIF|SELECTCASE|CASE|CASEELSE|ENDCASE)\\b"
+		},
+		{
+			"name": "keyword.erb.draw",
+			"match": "\\b(DRAWLINE|DRAWLINEFORM|PRINT_IMG|PRINT_RECT|PRINT_SPACE)\\b"
+		},
+		{
+			"name": "keyword.erb.color",
+			"match": "\\b(RE)?[GS]ET(BG)?COLOR\\b"
+		},
+		{
+			"name": "keyword.erb.color.etc",
+			"match": "\\b((SET(BG)?COLORBYNAME)|(GETDEF(BG)?COLOR)|(GETFOCUSCOLOR))\\b"
+		},
+		{
+			"name": "keyword.erb.font",
+			"match": "\\b((FONT(BOLD|ITALIC|REGULAR|STYLE))|GETSTYLE|((GET|SET|CHK)FONT))\\b"
+		},
+		{
+			"name": "variable.name.erb.global.int",
+			"match": "\\b(([A-Z]|D[A-E]|TA|TB)|TIME|MONEY|RESULT|COUNT|DAY|MASTER|TARGET|ASSI|PLAYER|ASSIPLEY|SELECTCOM|PREVCOM|NEXTCOM|LOSEBASE|UP|DOWN|PALAMLV|EXPLV|EJAC|FLAG|TFLAG|ITEM|ITEMSALES|BOUGHT|PBAND|CHARANUM|RAND|GLOBAL|ITEMPRICE)\\b"
+		},
+		{
+			"name": "variable.name.erb.chara.int",
+			"match": "\\b(NO|ISASSI|BASE|MAXBASE|ABL|TALENT|EXP|MARK|RELATION|JUEL|CFLAG|EQUIP|TEQUIP|PALAM|STAIN|EX|SOURCE|NOWEX|GOTJUEL|DOWNBASE|CUP|CDOWN|TCVAR|CDFLAG)\\b"
+		},
+		{
+			"name": "variable.name.erb.local.int",
+			"match": "\\b(LOCAL|ARG)\\b"
+		},
+		{
+			"name": "variable.name.erb.global.str",
+			"match": "\\b(RESULTS|STR|SAVESTR|ABLNAME|TALENTNAME|EXPNAME|MARKNAME|PALAMNAME|ITEMNAME|TRAINNAME|BASENAME|EQUIPNAME|TEQUIPNAME|STAINNAME|EXNAME|SOURCENAME|FLAGNAME|TFLAGNAME|CFLAGNAME|TCVARNAME|STRNAME|SAVESTRNAME|CDFLAGNAME1|CDFLAGNAME2|GLOBALNAME|GLOBALSNAME|NOITEM|GLOBALS|TSTR)\\b"
+		},
+		{
+			"name": "variable.name.erb.chara.str",
+			"match": "\\b(NAME|CALLNAME|NICKNAME|MASTERNAME|CSTR)\\b"
+		},
+		{
+			"name": "variable.name.erb.local.str",
+			"match": "\\b(LOCALS|ARGS)\\b"
+		},
+		{
+			"name": "constant.numeric.erb.spcial",
+			"match": "\\b(LINECOUNT|ISTIMEOUT|__INT_MAX__|__INT_MIN__|RANDDATA|LASTLOAD_VERSION|LASTLOAD_NO)\\b"
+		},
+		{
+			"name": "constant.character.erb.spcial",
+			"match": "\\b(WINDOW_TITLE|MONEYLABEL|DRAWLINESTR|LASTLOAD_TEXT|SAVEDATA_TEXT)\\b"
+		},
+		{
+			"name": "variable.language.erb.gamebase",
+			"match": "\\bGAMEBASE_(AUTHOR|INFO|YEAR|TITLE|GAMECODE|VERSION|ALLOWVERSION|NOITEM)\\b"
+		}
+	],
+	"scopeName": "source.erb"
+}

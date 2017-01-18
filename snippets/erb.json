@@ -1,0 +1,363 @@
+{
+    "printSnippets":{
+        "PRINT":{
+            "prefix": "PR",
+            "body": "PRINT ${text}",
+            "description": "PRINT TEXT"
+        },
+        "PRINT ":{
+            "prefix": "PRI",
+            "body": "PRINT ${text}",
+            "description": "PRINT TEXT"
+        },
+        "PRINTL":{
+            "prefix": "PL",
+            "body": "PRINTL ${text}",
+            "description": "PRINT NEWLINE"
+        },
+        "PRINTW":{
+            "prefix": "PW",
+            "body": "PRINTW ${text}",
+            "description": "PRINT WAIT"
+        },
+        "PRINTC":{
+            "prefix": "PC",
+            "body": "PRINTC ${text}",
+            "description": "PRINT RIGHTALIGN"
+        },
+        "PRINTLC":{
+            "prefix": "PLC",
+            "body": "PRINTLC ${text}",
+            "description": "PRINT LEFTALIGN"
+        },
+        "PRINTFORM":{
+            "prefix": "PF",
+            "body": "PRINTFORM ${form text}",
+            "description": "PRINT FORM"
+        },
+        "PRINTFORML":{
+            "prefix": "PFL",
+            "body": "PRINTFORML ${form text}",
+            "description": "PRINT FORM NEWLINE"
+        },
+        "PRINTFORMW":{
+            "prefix": "PFW",
+            "body": "PRINTFORMW ${form text}",
+            "description": "PRINT FORM WAIT"
+        },
+        "PRINTFORMC":{
+            "prefix": "PFC",
+            "body": "PRINTFORMC ${form text}",
+            "description": "PRINT FORM RIGHT ALIGN"
+        },
+        "PRINTFORMLC":{
+            "prefix": "PFLC",
+            "body": "PRINTFORMLC ${form text}",
+            "description": "PRINT FORM LEFT ALIGN"
+        },
+        "PRINTFORMS":{
+            "prefix": "PFS",
+            "body": "PRINTFORMS ${form string text}",
+            "description": "PRINT FORMS"
+        },
+        "PRINTFORMSL":{
+            "prefix": "PFSL",
+            "body": "PRINTFORMSL ${form string text}",
+            "description": "PRINT FORMS NEWLINE"
+        },
+        "PRINTFORMSW":{
+            "prefix": "PFSW",
+            "body": "PRINTFORMSW ${form string text}",
+            "description": "PRINT FORMS WAIT"
+        },
+        "PRINTDATA":{
+            "prefix": "PD",
+            "body": [
+                "PRINTDATA",
+                "\tDATALIST",
+                "\t\tDATA ${data text}",
+                "\tENDLIST",
+                "ENDDATA"
+            ],
+            "description": "PRINT DATA"
+        },
+        "PRINTDATAL":{
+            "prefix": "PDL",
+            "body": [
+                "PRINTDATAL",
+                "\tDATALIST",
+                "\t\tDATA ${data text}",
+                "\tENDLIST",
+                "ENDDATA"
+            ],
+            "description": "PRINT DATA NEWLINE"
+        },
+        "PRINTDATAW":{
+            "prefix": "PDW",
+            "body": [
+                "PRINTDATAW",
+                "\tDATALIST",
+                "\t\tDATA ${data text}",
+                "\tENDLIST",
+                "ENDDATA"
+            ],
+            "description": "PRINT DATA WAIT"
+        },
+        "PRINTBUTTON":{
+            "prefix": "PB",
+            "body": "PRINTBUTTON \"${button text}\", ${button value}",
+            "description": "PRINT BUTTON"
+        },
+        "PRINTBUTTONC":{
+            "prefix": "PBC",
+            "body": "PRINTBUTTONC \"${button text}\", ${button value}",
+            "description": "PRINT BUTTON RIGHT ALIGN"
+        },
+        "PRINTBUTTONLC":{
+            "prefix": "PBLC",
+            "body": "PRINTBUTTONLC \"${button text}\", ${button value}",
+            "description": "PRINT BUTTON LEFT ALIGN"
+        }
+    },
+    "loopSnippets":{
+        "FOR":{
+            "prefix": "FOR",
+            "body": [
+                "FOR ${COUNTER}, ${from}, ${to}",
+                "\t${body}",
+                "NEXT"
+            ],
+            "description": "FOR Statement"
+        },
+        "REPEAT":{
+            "prefix": "REPEAT",
+            "body": [
+                "REPEAT ${goal}",
+                "\t${body}",
+                "REND"
+            ],
+            "description": "REPEAT Statement"
+        },
+        "WHILE":{
+            "prefix": "WHILE",
+            "body":[
+                "WHILE ${var}",
+                "\t${body}",
+                "WEND"
+            ],
+            "description": "WHILE Statement"
+        },
+        "DO":{
+            "prefix": "DO",
+            "body":[
+                "DO ${var}",
+                "\t${body}",
+                "LOOP"
+            ],
+            "description": "DO-LOOP Statement"
+        }
+    },
+    "labelSnippets":{
+        "FunctionLabel":{
+            "prefix": "FUNC",
+            "body": [
+                ";--------------------------------------------------",
+                ";${function Description}",
+                ";",
+                ";Return: ",
+                ";--------------------------------------------------",
+                "@${functionName}"
+            ],
+            "description": "Function Label Line"
+        },
+        "GotoLabel":{
+            "prefix": "LABEL",
+            "body": "\\$${labelName}",
+            "description": "Goto Label Line"
+        },
+        "Test":{
+            "prefix": "AAA",
+            "body": "AAA"
+        }
+    },
+    "branchSnippets": {
+        "IF": {
+            "prefix": "IF",
+            "body": [
+                "IF ${condition}",
+                "\t${body}",
+                "ENDIF"
+            ]
+        },
+        "SIF": {
+            "prefix": "SIF",
+            "body": [
+                "SIF ${condition}",
+                "\t${body}"
+            ]
+        },
+        "ELSEIF": {
+            "prefix": "ELSEIF",
+            "body": [
+                "ELSEIF ${condition}",
+                "\t${body}"
+            ]
+        },
+        "ELSE": {
+            "prefix": "ELSE",
+            "body": [
+                "ELSE",
+                "\t${body}"
+            ]
+        },
+        "SELECTCASE": {
+            "prefix": "SELECTCASE",
+            "body": [
+                "SELECTCASE ${var}",
+                "\tCASE ${x}",
+                "\t\t${body}",
+                "ENDSELECT"
+            ]
+        },
+        "GOTO": {
+            "prefix": "GOTO",
+            "body": "GOTO ${labelName}"
+        },
+        "GOTOFORM": {
+            "prefix": "GOTOFORM",
+            "body": "GOTOFORM ${labelNameExpr}"
+        },
+        "CALL": {
+            "prefix": "CALL",
+            "body": "CALL ${functionName}"
+        },
+        "CALLFORM": {
+            "prefix": "CALLFORM",
+            "body": "CALLFORM ${functionNameExpr}"
+        },
+        "CALLF": {
+            "prefix": "CALLF",
+            "body": "CALLF ${methodName}",
+            "desciption": "Call Method"
+        },
+        "CALLFORMF": {
+            "prefix": "CALLFORMF",
+            "body": "CALLFORMF ${methodNameExpr}",
+            "description": "Call Method with expr"
+        },
+        "JUMP": {
+            "prefix": "JUMP",
+            "body": "JUMP ${functionName}"
+        },
+        "JUMPFORM": {
+            "prefix": "JUMPFORM",
+            "body": "JUMPFORM ${functionNameExpr}"
+        },
+        "TRYGOTO": {
+            "prefix": "TRYGOTO",
+            "body": "TRYGOTO ${labelName}"
+        },
+        "TRYGOTOFORM": {
+            "prefix": "TRYGOTOFORM",
+            "body": "TRYGOTOFORM ${labelNameExpr}"
+        },
+        "TRYCALL": {
+            "prefix": "TRYCALL",
+            "body": "TRYCALL ${functionName}"
+        },
+        "TRYCALLFORM": {
+            "prefix": "TRYCALLFORM",
+            "body": "TRYCALLFORM ${functionNameExpr}"
+        },
+        "TRYJUMP": {
+            "prefix": "TRYJUMP",
+            "body": "TRYJUMP ${functionName}"
+        },
+        "TRYJUMPFORM": {
+            "prefix": "TRYJUMPFORM",
+            "body": "TRYJUMPFORM ${functionNameExpr}"
+        },
+        "TRYCCGOTO": {
+            "prefix": "TRYCGOTO",
+            "body": [
+                "TRYCGOTO ${labelName}",
+                "\t${ifExist}",
+                "CATCH",
+                "\t${notExist}",
+                "ENDCATCH"
+                ]
+        },
+        "TRYCGOTOFORM": {
+            "prefix": "TRYCGOTOFORM",
+            "body": [
+                "TRYCGOTOFORM ${labelNameExpr}",
+                "\t${ifExist}",
+                "CATCH",
+                "\t${notExist}",
+                "ENDCATCH"
+                ]
+        },
+        "TRYCCALL": {
+            "prefix": "TRYCCALL",
+            "body": [
+                "TRYCCALL ${functionName}",
+                "\t${ifExist}",
+                "CATCH",
+                "\t${notExist}",
+                "ENDCATCH"
+                ]
+        },
+        "TRYCCALLFORM": {
+            "prefix": "TRYCCALLFORM",
+            "body": [
+                "TRYCCALLFORM ${functionNameExpr}",
+                "\t${ifExist}",
+                "CATCH",
+                "\t${notExist}",
+                "ENDCATCH"
+                ]
+        },
+        "TRYCJUMP": {
+            "prefix": "TRYCJUMP",
+            "body": [
+                "TRYCJUMP ${functionName}",
+                "\t${ifExist}",
+                "CATCH",
+                "\t${notExist}",
+                "ENDCATCH"
+                ]
+        },
+        "TRYCJUMPFORM": {
+            "prefix": "TRYCJUMPFORM",
+            "body": [
+                "TRYCJUMPFORM ${functionNameExpr}",
+                "\t${ifExist}",
+                "CATCH",
+                "\t${notExist}",
+                "ENDCATCH"
+                ]
+        },
+        "CATCH": {
+            "prefix": "CATCH",
+            "body": [
+                "CATCH",
+                "\t${body}",
+                "ENDCATCH"
+            ]
+        },
+        //TRYCALLLIST
+        "RETURN": {
+            "prefix": "RETURN",
+            "body": "RETURN ${return value}"
+        },
+        "RETURNFORM": {
+            "prefix": "RETURNFORM",
+            "body": "RETURNFORM ${return expr}"
+        },
+        "RETURNF": {
+            "prefix": "RETURNF",
+            "body": "RETURNF ${return value}",
+            "description": "Return method value"
+        }
+    }
+}

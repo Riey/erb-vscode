@@ -1,0 +1,34 @@
+{
+    "name": "erb",
+    "displayName": "Erb",
+    "description": "ERB & CSV language support for Visual Studio Code",
+    "version": "0.0.1",
+    "publisher": "Riey",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages",
+        "Snippets",
+        "Themes"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "erb",
+            "aliases": ["ERB", "Emuera"],
+            "extensions": [".erb"],
+            "configuration": "./language-configuration.json"
+        }],
+        "snippets": [
+            {
+                "language": "erb",
+                "path": "./snippets/erb.json"
+            }
+        ],
+        "grammars": [{
+            "language": "erb",
+            "scopeName": "source.erb",
+            "path": "./syntaxes/erb.tmLanguage.json"
+        }]
+    }
+}

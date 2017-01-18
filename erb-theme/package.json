@@ -1,0 +1,22 @@
+{
+    "name": "erb-theme",
+    "displayName": "erb-theme",
+    "description": "erb theme",
+    "version": "0.0.1",
+    "publisher": "Riey",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "erb-theme",
+                "uiTheme": "vs-dark",
+                "path": "./themes/erb-theme.tmTheme"
+            }
+        ]
+    }
+}
