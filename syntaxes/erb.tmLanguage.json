@@ -4,7 +4,7 @@
 	"patterns": [
 		{
 			"name": "comment.line.erb",
-			"match": "^;.*"
+			"match": "^\\s*;.*"
 		},
 		{
 			"name": "constant.numeric",
