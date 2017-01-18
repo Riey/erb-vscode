@@ -12,27 +12,27 @@
 		},
 		{
 			"name": "meta.preprocessor.numeric",
-			"match": "^#DIM .+$"
+			"match": "^\\s*#DIM .+$"
 		},
 		{
 			"name": "meta.preprocessor.string",
-			"match": "^#DIMS .+$"
+			"match": "^\\s*#DIMS .+$"
 		},
 		{
 			"name": "meta.preprocessor",
-			"match": "^#.*$"
+			"match": "^\\s*#.*$"
 		},
 		{
 			"name": "support.function",
-			"match": "^@[^\\s\\(]+"
+			"match": "^\\s*@[^\\s\\(]+"
 		},
 		{
 			"name": "variable.parameter.brace",
 			"begin": "\\(", "end": "\\)"
 		},
 		{
-			"name": "support.other",
-			"match": "^$.+"
+			"name": "support.other.erb.gotoLabel",
+			"match": "^\\s*$.+"
 		},
 		{
 			"name": "keyword.erb.print",
