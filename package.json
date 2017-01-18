@@ -2,16 +2,22 @@
     "name": "erb",
     "displayName": "Erb",
     "description": "ERB language support for Visual Studio Code",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "Riey",
     "engines": {
         "vscode": "^1.5.0"
     },
     "categories": [
         "Languages",
-        "Snippets",
-        "Themes"
+        "Snippets"
     ],
+
+    "repository": 
+    {
+        "type": "git",
+        "url": "https://github.com/Riey/erb-vscode.git"
+    },
+
     "contributes": {
         "languages": [{
             "id": "erb",
