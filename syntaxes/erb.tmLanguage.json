@@ -51,8 +51,68 @@
 			"match": "\\b(FOR|NEXT|REPEAT|REND|WHILE|WEND|DO|LOOP)\\b"
 		},
 		{
-			"name": "keyword.erb.branch",
-			"match": "\\b(IF|ELSEIF|ELSE|ENDIF|SIF|SELECTCASE|CASE|CASEELSE|ENDCASE)\\b"
+			"name": "keyword.control.branch",
+			"match": "\\b(IF|ELSEIF|ELSE|ENDIF|SIF|SELECTCASE|CASE|CASEELSE|ENDCASE|CATCH|ENDCATCH|TRYCALLLIST|TRYJUMPLIST|TRYGOTOLIST)\\b"
+		},
+		{
+			"name": "keyword.control.return",
+			"match": "\\bRETURN(F|FORM)?\\b"
+		},
+		{
+			"name": "keyword.control.callex",
+			"match": "\\b(EXCALL|CALLF|CALLFORMF|CALLEVENT|BEGIN|CALLTRAIN|DOTRAIN|THROW)\\b"
+		},
+		{
+			"name": "keyword.control.jump",
+			"match": "\\b(TRYC?)?(JUMP|CALL|GOTO)(FORM)?\\b"
+		},
+		{
+			"name": "keyword.control.input",
+			"match": "\\bT?INPUTS?\\b"
+		},
+		{
+			"name": "keyword.control.oneinput",
+			"match": "\\bT?ONEINPUTS?\\b"
+		},
+		{
+			"name": "keyword.control.wait",
+			"match": "\\b(T?WAIT|FORCEWAIT|WAITANYKEY)\\b"
+		},
+		{
+			"name": "keyword.erb.save",
+			"match": "\\b((SAVE|LOAD|DEL|CHK)DATA|SAVENOS|SAVEGLOBAL|LOADGLOBAL|OUTPUTLOG|SAVECHARA|LOADCHARA|CHKCHARADATA|FIND_CHARADATA)\\b"
+		},
+		{
+			"name": "keyword.erb.time",
+			"match": "\\b(GETTIME|GETMILLISECOND|GETSECOND)\\b"
+		},
+		{
+			"name": "keyword.erb.var",
+			"match": "\\b(VARSIZE|SWAP|RESETDATA|RESETGLOBAL|RESET_STAIN|FINDELEMENT|FINDLASTELEMENT|VARSET|CVARSET|ARRAYSHIFT|ARRAYREMOVE|ARRAYSORT|ARRAYCOPY|CUPCHECK)\\b"
+		},
+		{
+			"name": "keyword.erb.var.csv",
+			"match": "\\bCSV(NAME|CALLNAME|NICKNAME|MASTERNAME|BASE|CSTR|ABL|TALENT|MARK|EXP|RELATION|JUEL|EQUIP|CFLAG)\\b"
+		},
+		{
+			"name": "keyword.erb.chara",
+			"match": "\\b(ADD|DEL|SWAP|SORT|GET|ADDDEF|ADDVOID|DELALL|PICKUP|FIND|FINDLAST|COPY|ADDCOPY)CHARA\\b"
+		},
+		{
+			"name": "keyword.erb.chara",
+			"match": "\\bEXISTCSV\\b"
+		},
+		{
+			"name": "keyword.erb.math",
+			"match": "\\b(POWER|ABS|SIGN|SQRT|GETBIT|MAX|MIN|LIMIT|INRANGE|SETBIT|CLEARBIT|INVERTBIT)\\b"
+		},
+		{
+			"name": "keyword.erb.str",
+			"match": "\\b(TOUPPER|TOLOWER|TOHALF|TOFULL|TOSTR|ISNUMERIC|TOINT|SUBSTRINGU?|CHARATU|STRFINDU?|SPLIT|REPLACE|ESCAPE|UNICODE|ENCODETOUNI)\\b"
+		},
+		{
+			"name": "keyword.erb.str.strlen",
+			"match": "\\bSTRLEN(S|FORM)?U?\\b"
 		},
 		{
 			"name": "keyword.erb.draw",
